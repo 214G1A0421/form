@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form</title>
+  <style>
+    .form {
+      border: 2px solid black;
+      padding: 30px;
+      width: fit-content;
+      margin: 10px;
+      
+    }
+    table td {
+      padding: 3px;
+    }
+
+    input[name="primaryEmail"]:hover + p {
+        background-color: brown;
+    }
+
+   input[type="radio"]:checked {
+        width: 16px;
+        height: 16px;
+        }
+
+    input[type="radio"]:checked + label {
+        color: red;
+        }
+    input[required]{
+        border: 2px solid violet;
+    }
+    input[name="name"]:hover + p {
+        display: inline;
+        background-color: red;
+    }
+
+    input[name="name"]:hover + .hint-name {
+        display: inline;
+        background-color: red;
+        }
+
+    input[name="primaryEmail"]:hover + .hint-name {
+        display: inline;
+        background-color: red;
+        }
+
+    input[name="secondaryEmail"]:hover + .hint-name {
+        display: inline;
+        background-color: red;
+        }
+    
+    .hint-name {
+    display: none;
+    margin-left: 5px;
+    }
+
+    input[name="MOD"] {
+        display: none;
+    }
+   input[required]:focus{
+    background-color: yellow;
+   }
+   input[name="college"]{
+      border: 2px dotted blue;
+   }
+
+   
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; 
+}
+
+
+
+
+  </style>
+</head>
+<body>
+    <div class="container">
+    <h1 style="text-align: center;">Form</h1>
+  <form action="" class="form">
+    <table>
+      <tr>
+        <td> <label for="">Name:</label></td>
+        <td>
+            <input type="text" name="name" id="name" required />
+            <p class="hint-name">Enter your name</p>
+        </td>
+        </tr>
+      <tr>
+        <td><label for="college">College:</label></td>
+        <td><input type="text" name="college" id="college" /></td>
+      </tr>
+      <tr>
+        <td><label for="primaryEmail">Primary Email:</label></td>
+        <td><input type="email" name="primaryEmail" id="primaryEmail" required />
+            <p class="hint-name">Enter your email</p>
+        </td>
+      </tr>
+    
+      <tr>
+        <td><label for="secondaryEmail">Secondary Email:</label></td>
+        <td><input type="email" name="secondaryEmail" id="secondaryEmail" />
+         <p class="hint-name">Enter your email</p>
+        </td>
+      </tr>
+     
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" name="password" id="password" required /></td>
+      </tr>
+      <tr>
+        <td><label>Gender:</label></td>
+        <td>
+          <input type="radio" name="gender" id="male" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other" />
+          <label for="other">Other</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="age">Age:</label></td>
+        <td><input type="number" name="age" id="age" min="18" max="100" /></td>
+      </tr>
+      <tr>
+        <td><label for="mod">MOD:</label></td>
+        <td><input type="text" name="mod" id="mod" value="online" disabled/></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align:center;">
+          <button  type="submit">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  </div>
+</body>
+</html>
